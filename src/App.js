@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Comment from './components/Comment'
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <h1>Liste de commantaires</h1>
+    <Comment
+      name="Stevie Feliciano"
+      photo="https://semantic-ui.com/images/avatar/small/stevie.jpg"
+      />
+    <Comment
+      name="Tom Lukic"
+      photo="https://semantic-ui.com/images/avatar/small/joe.jpg"
+      />
+    <Comment
+      name="Steve Jobes"
+      photo="https://semantic-ui.com/images/avatar/small/steve.jpg"
+      />
+    <Comment
+      name="Elliot Fu"
+      photo="https://semantic-ui.com/images/avatar/small/elliot.jpg"
+      />
+    </>
+  )
 }
 
 export default App;
