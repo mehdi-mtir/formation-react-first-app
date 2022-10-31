@@ -10,14 +10,14 @@ function Comment(props){
         <div className="content">
           <a className="author">{props.name}</a>
           <div className="metadata">
-            <div className="date">2 days ago</div>
+            <div className="date">{props.datePublication}</div>
             <div className="rating">
               <i className="star icon"></i>
-              5 Faves
+              {props.evaluation} Faves
             </div>
           </div>
           <div className="text">
-            Hey guys, I hope this example comment is helping you read this documentation.
+            {props.texte}
           </div>
         </div>
       </div>
