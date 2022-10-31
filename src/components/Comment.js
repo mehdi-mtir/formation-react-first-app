@@ -18,6 +18,7 @@ function Comment(props){
           </div>
           <div className="text">
             {props.texte}
+            <p>Etat : {props.etat}</p>
           </div>
         </div>
       </div>
