@@ -46,16 +46,23 @@ class App extends React.Component{
   };
 
   editEtatCommentaire = (id, nouvelEtat)=>{
-    this.setState({commentaires : this.state.commentaires.map(
-      c => {
-        if(c.id === id){
-          return {...c, etat : nouvelEtat}
+    if(nouvelEtat === "approuvé"){
+      this.setState({commentaires : this.state.commentaires.map(
+        c => {
+          if(c.id === id){
+            return {...c, etat : nouvelEtat}
+          }
+          else{
+            return {...c};
+          }
         }
-        else{
-          return {...c};
-        }
-      }
-    )});
+      )});
+    }
+    else{
+      this.setState({commentaires : this.state.commentaires.filter(
+        c => c.id !== id
+      )});
+    }
   }
 
   render(){
